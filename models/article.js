@@ -1,4 +1,4 @@
-/*const mongoose = require(`mongoose`)
+const mongoose = require(`mongoose`)
 
 const articleschema = new mongoose.Schema({
     title:{
@@ -18,4 +18,4 @@ const articleschema = new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model (`Article`,articleschema)*/
+module.exports = mongoose.model (`Article`,articleschema)

@@ -7,8 +7,9 @@ mongoose.connect(`mongodb+srv://abdulhaseeb:haseeb1234@cluster0.kymwvsy.mongodb.
 
 app.set(`view engine`,`ejs`)
 
-app.use(`/articles`,articleRouter)
-//app.use(express.urlencoded({ extended: false }))
+app.use(express.urlencoded({ extended: false }))
+
+
 
 app.get(`/`,(req,res)=>{
     const articles =[{
@@ -24,6 +25,8 @@ app.get(`/`,(req,res)=>{
      res.render(`articles/index.ejs`,{ articles: articles })
 })
 
+
+app.use(`/articles`,articleRouter)
 app.listen(5000,()=>{
     console.log(`Server is running`);
 })
